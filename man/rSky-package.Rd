@@ -6,10 +6,10 @@
 \alias{rSky-package}
 \title{rSky: An R package for interacting with Bluesky.social}
 \description{
-The goal of rSky is to provide R users with some basic tools for authenticating to and fetch data from Bluesky. It currently has limited functionality.
+The goal of rSky is to provide R users with some basic tools for authenticating to and fetching data from Bluesky. It currently has limited functionality.
 }
 \author{
-\strong{Maintainer}: Daniel Scarnecchia \email{scarnecchia@gmail.com}
+\strong{Maintainer}: D. Scarnecchia \email{scarnecchia@gmail.com}
 
 }
 \keyword{internal}
