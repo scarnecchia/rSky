@@ -38,10 +38,14 @@ get_user_records <- function(request, key, repo, collection, count, throttle = c
     # Set initial cursor value
     cursor <- response$cursor
 
-    # Use the 'map' function to iterate over 'iter'
-    req <- purrr::map(iter, ~ {
+    # Initialize a list to store the responses
+    req <- list()
+
+    # Start a for loop
+    for (i in seq_along(iter)) {
+
       # If the current iteration number is divisible by the throttle value, pause for the defined throttle seconds
-      if (. %% throttle[[1]] == 0) {
+      if (i %% throttle[[1]] == 0) {
         Sys.sleep(throttle[[2]])
       }
 
@@ -59,8 +63,9 @@ get_user_records <- function(request, key, repo, collection, count, throttle = c
       # Update the cursor for the next iteration
       cursor <- req_response$cursor
 
-      return(req_response)
-    })
+      # Store the response in the list
+      req[[i]] <- req_response
+    }
 
     # Combine all responses
     all_responses <- c(list(response), req)
