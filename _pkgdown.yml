@@ -1,0 +1,17 @@
+template:
+  bootstrap: 5
+reference:
+- title: "Authenticating"
+  desc: >
+    Functions for retrieving a did and api key from an ATProto instance
+  contents:
+  - get_did
+  - get_api
+- title: "Fetching Data from ATProto"
+  desc: >
+    Functions for retrieving data from an ATProto instance
+  contents:
+  - get_user_records
+- title: "Helper functions"
+  contents:
+  - flatten_records
