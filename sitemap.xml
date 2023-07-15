@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/index.html</loc>
   </url>
   <url>
-    <loc>/reference/flatten_records.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/flatten_records.html</loc>
   </url>
   <url>
-    <loc>/reference/get_api.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/get_api.html</loc>
   </url>
   <url>
-    <loc>/reference/get_did.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/get_did.html</loc>
   </url>
   <url>
-    <loc>/reference/get_user_records.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/get_user_records.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/pipe.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>/reference/rSky-package.html</loc>
+    <loc>https://scarnecchia.github.io/rSky/reference/rSky-package.html</loc>
   </url>
 </urlset>
