@@ -21,5 +21,5 @@ Imports:
     tidyr,
     jsonlite,
     glue
-URL: https://scarnecchia.github.io/rSky/, https://github.com/scarnecchia/rSky
+URL: https://github.com/scarnecchia/rSky, https://scarnecchia.github.io/rSky/
 BugReports: https://github.com/scarnecchia/rSky/issues
