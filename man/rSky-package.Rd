@@ -8,6 +8,13 @@
 \description{
 The goal of rSky is to provide R users with some basic tools for authenticating to and fetching data from Bluesky. It currently has limited functionality.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://scarnecchia.github.io/rSky/}
+}
+
+}
 \author{
 \strong{Maintainer}: D. Scarnecchia \email{scarnecchia@gmail.com}
 

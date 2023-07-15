@@ -1,4 +1,4 @@
-url: "https://scarnecchia.github.io/rSky"
+url: https://scarnecchia.github.io/rSky/
 template:
   bootstrap: 5
 reference:
@@ -16,3 +16,4 @@ reference:
 - title: "Helper functions"
   contents:
   - flatten_records
+
