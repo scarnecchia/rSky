@@ -11,8 +11,8 @@ The goal of rSky is to provide R users with some basic tools for authenticating 
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://scarnecchia.github.io/rSky/}
   \item \url{https://github.com/scarnecchia/rSky}
+  \item \url{https://scarnecchia.github.io/rSky/}
   \item Report bugs at \url{https://github.com/scarnecchia/rSky/issues}
 }
 
