@@ -17,14 +17,14 @@
 #' @importFrom httr2 request req_headers req_url_path_append req_perform resp_body_json
 #' @importFrom glue glue
 #' @importFrom purrr map
-get_user_records <- function(request, key, repo, collection, count, throttle = c(3000, 300)) {
+get_search_records <- function(request, key, search, count, throttle = c(3000, 300)) {
   # Calculate the limit for the first request
   limit <- min(count, 100)
 
   # Get initial response
   response <- httr2::request(request) %>%
     httr2::req_headers("Authorization" = paste("Bearer", key)) %>%
-    httr2::req_url_path_append(glue::glue("?repo={repo}&collection={collection}&limit={limit}")) %>%
+    httr2::req_url_path_append(glue::glue("?q={search}&limit={limit}")) %>%
     httr2::req_perform() %>%
     httr2::resp_body_json()
 
@@ -54,7 +54,7 @@ get_user_records <- function(request, key, repo, collection, count, throttle = c
         httr2::req_headers("Authorization" = paste("Bearer", key)) %>%
         httr2::req_url_path_append(
           glue::glue(
-            "?repo={repo}&collection={collection}&limit=100&cursor={cursor}"
+            "?q={search}&limit=100&cursor={cursor}"
           )
         ) %>%
         httr2::req_perform() %>%
@@ -88,22 +88,9 @@ get_user_records <- function(request, key, repo, collection, count, throttle = c
   }
 }
 
-#' Flatten User Records
-#'
-#' This function takes a list, converts each element into a tibble, binds them all into a single dataframe,
-#' and then unnests the 'records' and 'value' columns.
-#'
-#' @param x A list of dataframes.
-#' @return A single dataframe with unnested 'records' and 'value' columns.
-#' @export
-#' @importFrom purrr map
-#' @importFrom tibble as_tibble
-#' @importFrom dplyr bind_rows select
-#' @importFrom tidyr unnest_wider
-flatten_records <- function(x) {
+flatten_search <- function(x) {
   x %>% purrr::map(tibble::as_tibble) %>%
     dplyr::bind_rows() %>%
-    dplyr::select(records) %>%
-    tidyr::unnest_wider(records) %>%
-    tidyr::unnest_wider(value)
+    dplyr::select(posts) %>%
+    tidyr::unnest_wider(posts)
 }
